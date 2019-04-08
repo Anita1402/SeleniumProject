@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium_Test_Suite">
+	<test thread-count="5" name="Selenium_Test">
+		<classes>
+			<class name="selenium_Test.googleSearch_With_TestNG" />
+			   <Methods>
+				   <include>name="google_Search" </include>
+			   </Methods>
+		</classes>
+	</test> <!-- Selenium_Test -->
+</suite> <!-- Selenium_Test_Suite -->
