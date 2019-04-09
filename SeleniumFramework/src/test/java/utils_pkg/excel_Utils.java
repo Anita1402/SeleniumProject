@@ -37,11 +37,11 @@ public class excel_Utils {
 	
 	
 	//Method to get the row count
-	public static void get_RowCount() {
-		
+	public static int get_RowCount() {
+		int rowCnt = 0;
 		try {
 	
-			int rowCnt = sheet.getPhysicalNumberOfRows(); //getting the # of rows in the file
+			rowCnt = sheet.getPhysicalNumberOfRows(); //getting the # of rows in the file
 			System.out.println("No of rows: "+ rowCnt);
 			
 		} catch (Exception exp) {
@@ -49,16 +49,36 @@ public class excel_Utils {
 			System.out.println(exp.getCause());
 			exp.printStackTrace();
 		}
+		return rowCnt;
 		
 		
 		//for old excelformat (xls) the below can be used
 		//HSSFWorkbook workbook = new HSSFWorkbook("excel file location");
 	}
 	
-	//Method to get the string data values from the excel test data
-	public static void get_CellData_String(int rowNum, int colNum) {
+
+	//Method to the column count
+	public static int get_ColCount() {
+		int colCnt = 0;
 		try {
-			String cellData = sheet.getRow(rowNum).getCell(colNum).getStringCellValue();
+			colCnt = sheet.getRow(0).getPhysicalNumberOfCells();
+			System.out.println("No of columns: "+ colCnt);
+			
+		} catch (Exception exp) {
+			System.out.println(exp.getMessage());
+			System.out.println(exp.getCause());
+			exp.printStackTrace();
+		}
+		return colCnt;
+		
+	}
+	
+	
+	//Method to get the string data values from the excel test data
+	public static String get_CellData_String(int rowNum, int colNum) {
+		String cellData = null;
+		try {
+			cellData = sheet.getRow(rowNum).getCell(colNum).getStringCellValue();
 			System.out.println("Cell Data: " + cellData);
 			
 		}
@@ -67,6 +87,7 @@ public class excel_Utils {
 			System.out.println(exp.getCause());
 			exp.printStackTrace();
 		}
+		return cellData;
 		
 	}
 	
