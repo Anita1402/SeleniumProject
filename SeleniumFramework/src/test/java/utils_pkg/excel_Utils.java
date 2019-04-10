@@ -79,7 +79,7 @@ public class excel_Utils {
 		String cellData = null;
 		try {
 			cellData = sheet.getRow(rowNum).getCell(colNum).getStringCellValue();
-			System.out.println("Cell Data: " + cellData);
+//			System.out.println("Cell Data: " + cellData);
 			
 		}
 		catch (Exception exp) {
