@@ -1,6 +1,11 @@
 package utils_pkg;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class excel_DataProvider {
 
@@ -11,6 +16,26 @@ public class excel_DataProvider {
 		   test_Data(excelPath,"Sheet1");	
 		} */
 	
+	WebDriver driver = null;
+	
+	@BeforeTest
+	public void setup() {
+		String projectPath = System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", projectPath+"/Drivers/chromedriver35.exe");
+		driver = new ChromeDriver();
+	}
+	
+	
+	@Test(dataProvider="testdata1")
+	public void print_Data(String username, String pwd) throws Exception {
+		System.out.println("UserName: "+ username + "   Password: "+ pwd);
+		
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.findElement(By.id("txtUsername")).sendKeys(username);
+		driver.findElement(By.id("txtPassword")).sendKeys(pwd);
+		Thread.sleep(2500);
+		
+	}
 	//getting the data values from excel to the data object
 	@DataProvider(name = "testdata1")
 	public Object[][] getdata() {
