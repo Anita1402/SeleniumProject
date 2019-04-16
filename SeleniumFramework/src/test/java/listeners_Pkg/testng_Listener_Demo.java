@@ -2,6 +2,9 @@ package listeners_Pkg;
 
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.Listeners;
@@ -19,7 +22,14 @@ public class testng_Listener_Demo {
 	@Test 
 	public void test2() {
     	 System.out.println("In test2");
-    	 Assert.assertTrue(false);
+    	 String projPath = System.getProperty("user.dir");
+    	 System.setProperty("webdriver.chrome.driver",projPath + "/Drivers/chromedriver35.exe");
+    	 WebDriver driver = new ChromeDriver();
+    	 
+    	 driver.get("http://google.com");
+    	 driver.findElement(By.name("q")).sendKeys("Automation");
+    	 driver.findElement(By.name("d")).sendKeys("Automation");
+    	 driver.close();
      }
      
 	@Test

@@ -1,10 +1,13 @@
 package listeners_Pkg;
 
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class listeners_With_Testng implements ITestListener {
+//adding listener methods by using implements
+public class listeners_With_Testng implements ITestListener, ISuiteListener {
 
 	public void onTestStart(ITestResult context) {
 		System.out.println("*****Test started : "+context.getName());
@@ -28,7 +31,7 @@ public class listeners_With_Testng implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		System.out.println("*****Test Failed : "+result.getName());
-		
+		//can capture error image and other details here
 	}
 
 	public void onTestSkipped(ITestResult result) {
@@ -38,6 +41,16 @@ public class listeners_With_Testng implements ITestListener {
 
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("*****Test sucess : "+result.getName());
+		
+	}
+
+	public void onFinish(ISuite arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onStart(ISuite arg0) {
+		// TODO Auto-generated method stub
 		
 	}
 	
