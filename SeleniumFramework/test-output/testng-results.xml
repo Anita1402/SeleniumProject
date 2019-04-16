@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-04-16T15:46:12Z" name="Default suite" finished-at="2019-04-16T15:46:12Z" duration-ms="81">
+  <suite started-at="2019-04-16T15:52:38Z" name="Default suite" finished-at="2019-04-16T15:52:38Z" duration-ms="81">
     <groups>
     </groups>
-    <test started-at="2019-04-16T15:46:12Z" name="Default test" finished-at="2019-04-16T15:46:12Z" duration-ms="81">
+    <test started-at="2019-04-16T15:52:38Z" name="Default test" finished-at="2019-04-16T15:52:38Z" duration-ms="81">
       <class name="listeners_Pkg.testng_Listener_Demo">
-        <test-method signature="test1()[pri:0, instance:listeners_Pkg.testng_Listener_Demo@548e6d58]" started-at="2019-04-16T15:46:12Z" name="test1" finished-at="2019-04-16T15:46:12Z" duration-ms="8" status="PASS">
+        <test-method signature="test1()[pri:0, instance:listeners_Pkg.testng_Listener_Demo@548e6d58]" started-at="2019-04-16T15:52:38Z" name="test1" finished-at="2019-04-16T15:52:38Z" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:0, instance:listeners_Pkg.testng_Listener_Demo@548e6d58]" started-at="2019-04-16T15:46:12Z" name="test2" finished-at="2019-04-16T15:46:12Z" duration-ms="5" status="FAIL">
+        <test-method signature="test2()[pri:0, instance:listeners_Pkg.testng_Listener_Demo@548e6d58]" started-at="2019-04-16T15:52:38Z" name="test2" finished-at="2019-04-16T15:52:38Z" duration-ms="0" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -54,7 +54,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method signature="test3()[pri:0, instance:listeners_Pkg.testng_Listener_Demo@548e6d58]" started-at="2019-04-16T15:46:12Z" name="test3" finished-at="2019-04-16T15:46:12Z" duration-ms="4" status="SKIP">
+        <test-method signature="test3()[pri:0, instance:listeners_Pkg.testng_Listener_Demo@548e6d58]" started-at="2019-04-16T15:52:38Z" name="test3" finished-at="2019-04-16T15:52:38Z" duration-ms="0" status="SKIP">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[This test3 is skipped]]>

@@ -8,6 +8,7 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="listeners_Pkg.testng_Listener_Demo" />
+			<class name="listeners_Pkg.testng_Listeners_Demo2" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
