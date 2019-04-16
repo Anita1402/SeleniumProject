@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="listeners_Pkg.listeners_With_Testng"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="TestOnIE(failed)">
+    <parameter name="browserName" value="ie"/>
     <classes>
-      <class name="listeners_Pkg.testng_Listener_Demo">
+      <class name="priority_Demo.testng_MultiBrowser_Demo">
         <methods>
-          <include name="test3"/>
-          <include name="test2"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- listeners_Pkg.testng_Listener_Demo -->
-      <class name="listeners_Pkg.testng_Listener_Demo2">
-        <methods>
-          <include name="test6"/>
-        </methods>
-      </class> <!-- listeners_Pkg.testng_Listener_Demo2 -->
+      </class> <!-- priority_Demo.testng_MultiBrowser_Demo -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- TestOnIE(failed) -->
 </suite> <!-- Failed suite [Suite] -->
